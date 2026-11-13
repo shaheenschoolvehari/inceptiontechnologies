@@ -18613,13 +18613,26 @@ body.megamenu-popup-active .mobile-nav__content {
   box-shadow: 0 4px 14px rgba(11, 15, 25, 0.04);
   transition: all 300ms ease;
   position: relative;
-  cursor: default;
+  cursor: pointer;
+  text-decoration: none !important;
 }
 
 .service-details__sidebar__card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(160, 104, 253, 0.12);
-  border-color: rgba(160, 104, 253, 0.3);
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #A068FD 0%, #7A6CFA 100%);
+  border-color: transparent;
+  box-shadow: 0 10px 25px rgba(160, 104, 253, 0.35);
+}
+
+.service-details__sidebar__card:hover .service-details__sidebar__card-title {
+  color: #ffffff;
+}
+
+.service-details__sidebar__card:hover .service-details__sidebar__card-icon {
+  background-color: #ffffff;
+  color: var(--tolak-base, #A068FD);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transform: scale(1.08);
 }
 
 .service-details__sidebar__card-icon {
@@ -18644,6 +18657,7 @@ body.megamenu-popup-active .mobile-nav__content {
   font-family: var(--tolak-heading-font, "Raleway", sans-serif);
   font-weight: 700;
   margin: 0;
+  transition: color 300ms ease;
 }
 
 /* Active / Current Card */
@@ -18654,7 +18668,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 
 .service-details__sidebar__card.current:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   box-shadow: 0 12px 30px rgba(160, 104, 253, 0.45);
 }
 
