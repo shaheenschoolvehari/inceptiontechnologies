@@ -1,0 +1,43 @@
+import shape from '@/assets/images/shapes/slider-1-shape-1.png';
+import bannerAiSolutions from '@/assets/images/backgrounds/bannar-3.jpeg';
+import bannerItSolutions from '@/assets/images/backgrounds/hero-slider-bg.jpg';
+import bannerSoftwareDev from '@/assets/images/backgrounds/bannar-1.jpeg';
+import { faFacebookF, faInstagram, faPinterestP, faTwitter } from '@fortawesome/free-brands-svg-icons';
+
+const mainSliderOneData = [
+    {
+        id: 1,
+        shape,
+        bg: bannerAiSolutions,
+        showContent: true,
+        hasOverlay: true,
+        subTitle: "Welcome to Inception Technologies",
+        title: "Empowering Growth with<br> Next-Gen AI Soluti<span>o</span>ns",
+        text: "From Agentic AI & multi-agent workflows to custom LLMs, <br>we build intelligent systems tailored to your business.",
+        social: [],
+    },
+    {
+        id: 2,
+        shape,
+        bg: bannerItSolutions,
+        showContent: true,
+        hasOverlay: true,
+        subTitle: "Inception Technologies — Digital Innovators",
+        title: "Power of AI with the Touch of<br> Human-Like Conversations<br> Nex-Gen 24/7 Customer Supp<span>o</span>rt<br> Built for Your Business.",
+        text: "Empower your business with Inception Technologies’ custom AI support agents <br>delivering fast, accurate, and human-like support 24/7.",
+        social: [],
+    },
+    {
+        id: 3,
+        shape,
+        bg: bannerSoftwareDev,
+        showContent: true,
+        hasOverlay: true,
+        subTitle: "Custom Software Engineering",
+        title: "Scalable, Secure &amp;<br> Future-Ready S<span>o</span>ftware",
+        text: "Fully customized web, mobile, and enterprise platforms <br>engineered to solve your unique business challenges.",
+        social: [],
+    }
+];
+
+export default mainSliderOneData;

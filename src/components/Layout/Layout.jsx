@@ -1,0 +1,96 @@
+"use client";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+
+// import WOW from 'wowjs';
+import CustomCursor from "../CustomCursor/CustomCursor";
+import Preloader from "../Preloader/Preloader";
+import MobileNav from "../MobileNav/MobileNav";
+import WhatsAppWidget from "../WhatsAppWidget/WhatsAppWidget";
+import { usePathname } from "next/navigation";
+import { Toaster } from "react-hot-toast";
+
+const Layout = ({ children, pageTitle, onePage }) => {
+  const [mounted, setMounted] = useState(false);
+
+
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+
+    const tolakBtns = document.querySelectorAll(".tolak-btn");
+
+    const handleMouseEnter = (e) => {
+      const btn = e.currentTarget;
+      const parentOffset = btn.getBoundingClientRect();
+      const relX = e.pageX - window.scrollX - parentOffset.left;
+      const relY = e.pageY - window.scrollY - parentOffset.top;
+      const span = btn.querySelector("span");
+
+      if (span) {
+        span.style.top = relY + "px";
+        span.style.left = relX + "px";
+      }
+    };
+
+    const handleMouseOut = (e) => {
+      const btn = e.currentTarget;
+      const parentOffset = btn.getBoundingClientRect();
+      const relX = e.pageX - window.scrollX - parentOffset.left;
+      const relY = e.pageY - window.scrollY - parentOffset.top;
+      const span = btn.querySelector("span");
+
+      if (span) {
+        span.style.top = relY + "px";
+        span.style.left = relX + "px";
+      }
+    };
+
+    tolakBtns.forEach((btn) => {
+      btn.addEventListener("mouseenter", handleMouseEnter);
+      btn.addEventListener("mouseout", handleMouseOut);
+    });
+
+    // Clean up event listeners on component unmount
+    return () => {
+      tolakBtns.forEach((btn) => {
+        btn.removeEventListener("mouseenter", handleMouseEnter);
+        btn.removeEventListener("mouseout", handleMouseOut);
+      });
+    };
+  }, [mounted]);
+
+
+
+
+  useEffect(() => {
+    if (!mounted) return;
+
+    AOS.init();
+
+
+  }, [mounted]);
+
+  if (!mounted) {
+    return null;
+  }
+
+  return (
+    <>
+      <CustomCursor />
+      <Preloader />
+      <div className='page-wrapper'>
+        {children}
+      </div>
+      <MobileNav onePage={onePage} />
+      <WhatsAppWidget />
+      <Toaster position="top-right" />
+    </>
+  );
+};
+
+export default Layout;
