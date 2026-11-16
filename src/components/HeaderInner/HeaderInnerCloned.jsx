@@ -23,6 +23,7 @@ const HeaderInnerCloned = () => {
     return null;
   }
 
+  
   return (
     <header
       className={`main-header sticky-header sticky-header--normal sticky-header--cloned ${

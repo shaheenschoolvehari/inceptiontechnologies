@@ -25725,7 +25725,7 @@ body.boxed-wrapper .main-slider-one__floating-text {
 }
 
 @media (min-width: 1200px) {
-  .faq-two__content {
+  ... [truncated for diff preview] .faq-two__content {
     padding-right: 50px;
   }
 }
