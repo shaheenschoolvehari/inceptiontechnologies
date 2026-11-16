@@ -47,7 +47,7 @@ const page = () => {
       <AboutOne />
       <FunFactOne />
       <CtaTwo />
-      <TeamOne />
+      {/* <TeamOne /> -- Hidden for now; uncomment when ready to add team members */}
       <OurSolution />
       <FeatureTwo />
       {/* <PojectOne /> -- Future update: Uncomment to display Projects section */}
