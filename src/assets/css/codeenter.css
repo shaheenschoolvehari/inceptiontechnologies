@@ -5996,8 +5996,8 @@ h6 {
 }
 
 .main-header-inner.sticky-header--cloned {
-  background-color: var(--tolak-black, #0B0F19);
-  box-shadow: 0px 3px 18px rgba(var(--tolak-white-rgb, 255, 255, 255), 0.07);
+  background-color: var(--tolak-white, #fff);
+  box-shadow: 0px 3px 18px rgba(var(--tolak-black-rgb, 11, 15, 25), 0.07);
 }
 
 @media (max-width: 1199px) {
@@ -13959,18 +13959,18 @@ body.megamenu-popup-active .mobile-nav__content {
 
 .page-header__content {
   position: relative;
-  padding: 318px 0 226px;
+  padding: 170px 0 160px;
 }
 
 @media (max-width: 1199px) {
   .page-header__content {
-    padding: 280px 0 150px;
+    padding: 140px 0 120px;
   }
 }
 
 @media (max-width: 767px) {
   .page-header__content {
-    padding: 220px 0 100px;
+    padding: 110px 0 80px;
   }
 }
 

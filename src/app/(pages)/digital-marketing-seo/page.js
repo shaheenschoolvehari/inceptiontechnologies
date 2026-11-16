@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout/Layout";
+import TopBar from "@/components/TopBar/TopBar";
 import HeaderInner from "@/components/HeaderInner/HeaderInner";
 import HeaderInnerCloned from "@/components/HeaderInner/HeaderInnerCloned";
 import PageHeader from "@/components/PageHeader/PageHeader";
@@ -15,6 +16,7 @@ export const metadata = {
 const DigitalMarketingSeoPage = () => {
   return (
     <Layout pageTitle="Digital Marketing & Technical SEO Services">
+      <TopBar />
       <HeaderInner />
       <HeaderInnerCloned />
       <PageHeader
