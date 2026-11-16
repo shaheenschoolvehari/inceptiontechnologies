@@ -35,7 +35,19 @@ const ServiceDetails = ({ currentId }) => {
                 <Row className="gutter-y-30">
                     <Col md={12} xl={8}>
                         <div className="service-details__thumbnail">
-                            <Image src={thumbnailImage} alt="Service Detail" />
+                            <Image
+                                src={thumbnailImage}
+                                alt="Service Detail"
+                                width={770}
+                                height={454}
+                                className={currentId === "/digital-marketing-seo" ? "fit-cover" : ""}
+                                style={{
+                                    width: "100%",
+                                    height: "100%",
+                                    objectFit: currentId === "/digital-marketing-seo" ? "cover" : "contain"
+                                }}
+                                priority
+                            />
                         </div>
                     </Col>
                     <Col md={12} xl={4}>
