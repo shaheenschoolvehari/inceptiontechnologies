@@ -29,6 +29,8 @@ const ServiceDetails = ({ currentId }) => {
     } = data
 
 
+    const isCover = currentId === "/digital-marketing-seo" || currentId === "/ai-enterprise-success";
+
     return (
         <section className="service-details">
             <Container>
@@ -40,11 +42,11 @@ const ServiceDetails = ({ currentId }) => {
                                 alt="Service Detail"
                                 width={770}
                                 height={454}
-                                className={currentId === "/digital-marketing-seo" ? "fit-cover" : ""}
+                                className={isCover ? "fit-cover" : ""}
                                 style={{
                                     width: "100%",
                                     height: "100%",
-                                    objectFit: currentId === "/digital-marketing-seo" ? "cover" : "contain"
+                                    objectFit: isCover ? "cover" : "contain"
                                 }}
                                 priority
                             />
