@@ -5,9 +5,11 @@ import SubNavItems from './SubNavItems';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import { useRootContext } from '@/Provider/context';
 
 const MobileNavItems = ({ navItem = {} }) => {
-    const pathname = usePathname;
+    const pathname = usePathname();
+    const { handleToggle } = useRootContext();
 
     const [expand, setExpand] = useState(false);
 
@@ -22,7 +24,13 @@ const MobileNavItems = ({ navItem = {} }) => {
         <li
             className={`${pathname === href ? " current" : ""}`}
         >
-            <Link href={href} className={expand ? "expanded" : ""}>
+            <Link
+                href={href}
+                className={expand ? "expanded" : ""}
+                onClick={() => {
+                    handleToggle();
+                }}
+            >
                 {name}
                 {subNavItems?.length ? (
                     <button

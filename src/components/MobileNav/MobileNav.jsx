@@ -19,7 +19,7 @@ const MobileNav = ({ onePage }) => {
                 </span>
 
                 <div className="logo-box">
-                    <Link href="/" >
+                    <Link href="/" onClick={handleToggle}>
                         <Image src={logo_light.src} width={240} height={56} style={{ width: "auto", height: "56px", objectFit: "contain" }} alt="Inception Technology" />
                     </Link>
                 </div>

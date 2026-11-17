@@ -30990,32 +30990,152 @@ body {
 }
 
 /* 4. Mobile Drawer Navigation Container & Links */
+.mobile-nav__wrapper {
+  z-index: 999999 !important;
+}
+
+.mobile-nav__overlay {
+  background-color: rgba(11, 15, 25, 0.78) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  opacity: 0;
+  transition: opacity 350ms ease !important;
+}
+
+.mobile-nav__wrapper.expanded .mobile-nav__overlay {
+  opacity: 1 !important;
+}
+
 .mobile-nav__content {
-  max-width: calc(100vw - 40px) !important;
-  width: 300px !important;
+  width: 320px !important;
+  max-width: 86vw !important;
+  background-color: #0B0F19 !important;
+  border-right: 1px solid rgba(160, 104, 253, 0.2) !important;
+  box-shadow: 10px 0 40px rgba(0, 0, 0, 0.6) !important;
+  padding: 24px 20px 32px !important;
+  height: 100% !important;
+  overflow-y: auto !important;
+  scrollbar-width: thin;
 }
 
+.mobile-nav__close {
+  top: 18px !important;
+  right: 18px !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: var(--tolak-white, #fff) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 15px !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  z-index: 20 !important;
+}
+
+.mobile-nav__close:hover,
+.mobile-nav__close:active {
+  background: var(--tolak-base, #A068FD) !important;
+  color: #ffffff !important;
+  transform: rotate(90deg) !important;
+}
+
+.mobile-nav__content .logo-box {
+  margin-bottom: 24px !important;
+  padding-bottom: 18px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  display: flex !important;
+  align-items: center !important;
+  padding-right: 48px !important;
+}
+
+.mobile-nav__content .logo-box img {
+  max-height: 48px !important;
+  max-width: 190px !important;
+  height: auto !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
+
+.mobile-nav__container .main-menu__list li,
 .mobile-nav__container .main-menu__list li.scrollToLink {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
 }
 
+.mobile-nav__container .main-menu__list li > a,
 .mobile-nav__container .main-menu__list li.scrollToLink a {
   display: flex !important;
   align-items: center !important;
-  height: 46px !important;
-  line-height: 46px !important;
-  color: var(--tolak-white, #fff) !important;
-  font-size: 13px !important;
-  font-weight: 500 !important;
+  justify-content: space-between !important;
+  height: 48px !important;
+  line-height: 48px !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.1em !important;
+  letter-spacing: 0.08em !important;
   cursor: pointer !important;
-  transition: color 0.3s ease !important;
+  transition: all 0.2s ease !important;
+  padding: 0 4px !important;
 }
 
+.mobile-nav__container .main-menu__list li > a:hover,
+.mobile-nav__container .main-menu__list li.current > a,
 .mobile-nav__container .main-menu__list li.scrollToLink a:hover,
 .mobile-nav__container .main-menu__list li.scrollToLink a.current {
   color: var(--tolak-base, #A068FD) !important;
+  padding-left: 8px !important;
+}
+
+.mobile-nav__contact {
+  margin-top: 24px !important;
+  padding-top: 20px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  margin-bottom: 10px !important;
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.mobile-nav__contact li {
+  display: flex !important;
+  align-items: flex-start !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 13.5px !important;
+  line-height: 1.45 !important;
+  margin-bottom: 15px !important;
+  gap: 12px !important;
+}
+
+.mobile-nav__contact li > i {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #A068FD 0%, #7A6CFA 100%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 13px !important;
+  color: #ffffff !important;
+  margin-right: 0 !important;
+  margin-top: 2px !important;
+  flex-shrink: 0 !important;
+}
+
+.mobile-nav__contact li a {
+  color: rgba(255, 255, 255, 0.9) !important;
+  transition: color 0.2s ease !important;
+  word-break: break-all !important;
+}
+
+.mobile-nav__contact li a:hover {
+  color: var(--tolak-base, #A068FD) !important;
+}
+
+.mobile-nav__contact li span {
+  line-height: 1.45 !important;
 }
 
 /* 5. Main Hero Slider Responsiveness & Banner View Optimization */
