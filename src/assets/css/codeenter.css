@@ -30892,7 +30892,8 @@ body.boxed-wrapper .main-slider-one__floating-text {
 html,
 body {
   overflow-x: hidden !important;
-  max-width: 100vw !important;
+  max-width: 100% !important;
+  width: 100% !important;
   position: relative;
 }
 
@@ -30909,7 +30910,7 @@ body {
 }
 
 .topbar-marquee {
-  max-width: 100vw !important;
+  max-width: 100% !important;
   overflow: hidden !important;
 }
 
@@ -31389,7 +31390,7 @@ body {
   }
 }
 
-/* 13. FeatureTwo Section */
+/* 13. FeatureTwo Section Responsiveness */
 @media (max-width: 991px) {
   .feature-two {
     margin-top: -60px !important;
@@ -31397,18 +31398,55 @@ body {
   }
 
   .feature-two__item {
-    margin-top: 35px !important;
-    padding: 45px 18px 20px !important;
+    margin-top: 50px !important;
+    margin-bottom: 10px !important;
+    padding: 50px 20px 25px !important;
+  }
+
+  .feature-two__item--reverse {
+    margin-top: 50px !important;
+    margin-bottom: 10px !important;
+    padding-top: 50px !important;
+    padding-bottom: 25px !important;
+    border-bottom: 1px solid rgba(221, 221, 221, 0.8) !important;
+  }
+
+  .feature-two__item--reverse .feature-two__item__icon {
+    top: -37px !important;
+    bottom: auto !important;
   }
 }
 
 @media (max-width: 575px) {
   .feature-two {
     margin-top: -40px !important;
+    padding: 0 0 40px !important;
+  }
+
+  .feature-two__item {
+    margin-top: 48px !important;
+    margin-bottom: 8px !important;
+    padding: 46px 18px 22px !important;
+  }
+
+  .feature-two__item--reverse {
+    margin-top: 48px !important;
+    margin-bottom: 8px !important;
+    padding-top: 46px !important;
+    padding-bottom: 22px !important;
+  }
+
+  .feature-two__item__icon {
+    width: 74px !important;
+    height: 74px !important;
+    font-size: 40px !important;
+    top: -37px !important;
+    bottom: auto !important;
   }
 
   .feature-two__item__title {
     font-size: 19px !important;
+    margin-top: 4px !important;
   }
 
   .feature-two__item__text {
@@ -31420,12 +31458,14 @@ body {
 .slide-text {
   overflow: hidden !important;
   width: 100% !important;
-  max-width: 100vw !important;
+  max-width: 100% !important;
+  position: relative;
 }
 
 .slide-text__wrap {
   overflow: hidden !important;
   width: 100% !important;
+  max-width: 100% !important;
 }
 
 @media (max-width: 767px) {
