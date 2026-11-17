@@ -7960,29 +7960,42 @@ body.megamenu-popup-active .mobile-nav__content {
 --------------------------------------------------------------*/
 .cta-one {
   position: relative;
-  background-color: var(--tolak-white, #fff);
+  background-color: var(--tolak-black, #0B0F19);
+  padding: 45px 0 50px;
 }
 
 .cta-one__bg {
   position: absolute;
   right: 0;
+  left: 0;
   top: 0;
   bottom: 0;
-  margin: auto;
-  height: 394px;
+  height: 100%;
   width: 100%;
   background-color: var(--tolak-black, #0B0F19);
 }
 
 @media (max-width: 1199px) {
+  .cta-one {
+    padding: 40px 0 45px;
+  }
   .cta-one__bg {
-    height: 420px;
+    height: 100%;
   }
 }
 
 @media (max-width: 991px) {
+  .cta-one {
+    padding: 35px 0 40px;
+  }
   .cta-one__bg {
     height: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .cta-one {
+    padding: 28px 0 32px;
   }
 }
 
@@ -8068,7 +8081,7 @@ body.megamenu-popup-active .mobile-nav__content {
 
 .cta-one__content {
   position: relative;
-  padding: 60px 0;
+  padding: 30px 0;
 }
 
 @media (min-width: 1200px) {
@@ -30539,6 +30552,7 @@ body.boxed-wrapper .main-slider-one__floating-text {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
 }
 
 .cta-one__image img {
@@ -31175,22 +31189,27 @@ body {
 /* 7. CTA One Section Responsiveness */
 @media (max-width: 991px) {
   .cta-one__image {
-    margin: 0 auto 30px auto !important;
+    margin: 10px auto 30px auto !important;
     text-align: center !important;
     display: block !important;
   }
 
   .cta-one__content {
-    padding: 30px 15px !important;
+    padding: 25px 15px !important;
   }
 
   .cta-one__bg {
     border-radius: 0 !important;
     width: 100% !important;
+    height: 100% !important;
   }
 }
 
 @media (max-width: 575px) {
+  .cta-one__image {
+    margin: 6px auto 25px auto !important;
+  }
+
   .cta-one__box__title {
     font-size: clamp(20px, 5.5vw, 24px) !important;
   }
