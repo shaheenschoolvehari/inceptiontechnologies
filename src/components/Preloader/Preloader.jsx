@@ -10,11 +10,11 @@ const Preloader = () => {
     useEffect(() => {
         const fadeTimer = setTimeout(() => {
             setOpacity(0);
-        }, 2200);
+        }, 500);
 
         const removeTimer = setTimeout(() => {
             setVisible(false);
-        }, 2700);
+        }, 900);
 
         return () => {
             clearTimeout(fadeTimer);

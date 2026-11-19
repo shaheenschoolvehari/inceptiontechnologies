@@ -16668,9 +16668,22 @@ body.megamenu-popup-active .mobile-nav__content {
   padding: 120px 0;
 }
 
+@media (min-width: 1200px) {
+  .about-one__content {
+    padding-right: 75px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .about-one__content {
+    padding-right: 95px;
+  }
+}
+
 @media (max-width: 1199px) {
   .about-one__content {
     max-width: 590px;
+    padding-right: 0;
   }
 }
 
